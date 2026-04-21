@@ -46,7 +46,7 @@ body {
 
 /* Utility Classes */
 .gradient-text {
-    background: linear-gradient(45deg, #475569, #64748b, #94a3b8);
+    background: linear-gradient(45deg, #ffffff, #fdfdfd, #ffffff);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -257,7 +257,7 @@ body {
 .hero-image {
     position: absolute;
     inset: 0;
-    background-image: url('public/images/Screenshot 2025-07-07 230254.png');
+    background-image: url('public/images/Screenshot 2026-04-21 141045.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -299,7 +299,7 @@ body {
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
-    color: #1e293b;
+    color: #ffffff;
 }
 
 .hero-subtitle {
@@ -313,7 +313,7 @@ body {
 
 .hero-buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
     align-items: center;
 }
@@ -893,16 +893,31 @@ section {
 }
 
 /* Responsive Design */
-@media (min-width: 640px) {
-    .hero-buttons {
-        flex-direction: row;
-        justify-content: center;
-    }
-    
-    .form-row {
-        grid-template-columns: 1fr 1fr;
-    }
+@media (max-width: 768px) {
+  .hero-image {
+    background-size: cover;         
+    background-position: 90% center; 
+    background-repeat: no-repeat;
+  }
+
+  .hero-content {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
+
 
 @media (min-width: 768px) {
     .desktop-nav {
